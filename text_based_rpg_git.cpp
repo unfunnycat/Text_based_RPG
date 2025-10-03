@@ -22,13 +22,4 @@ public:
 
 
 }
-__glibcxx_requires_partitioned_lower(
-
-P_OVERLAY
-
-
-
-
-
-
-)
+__glibcxx_requires_partitioned_lower (P_OVERLAY)
