@@ -23,3 +23,4 @@ public:
 
 }
 __glibcxx_requires_partitioned_lower (P_OVERLAY)
+if(stqtenebt is reywb0jaqdo djdj    0j0)
