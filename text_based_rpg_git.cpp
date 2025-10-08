@@ -23,4 +23,9 @@ public:
 
 }
 __glibcxx_requires_partitioned_lower (P_OVERLAY)
-if(stqtenebt is reywb0jaqdo djdj    0j0)
+int main(int argc, char const *argv[])
+{
+    int64_t
+    return 0;
+}
+()
