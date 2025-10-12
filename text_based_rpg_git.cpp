@@ -1,31 +1,30 @@
-
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
+#include <thread>
+#include<chrono>
+#include <random>
+#include <cstdlib>
+#include <memory>
+#include <algorithm>
 
-class Item; 
+void clearScreen() {
+#ifdef _WIN32
+    system("cls")
 
-class Character {
-public:
-    Character(std::string name, int health, int strength)
-        : name(name), health(health), strength(strength) {}
+ #else
+    system("clear")
+ #endif
+}
 
-    virtual ~Character() {} 
-
-    void attack(Character& target) {
-        std::cout << this->name << " attacks " << target.getName() << "!" << std::endl;
-        target.takeDamage(this->strength);
+ void typeText(const std::string& text,
+ int delay_ms = 40) {
+    for (char c : text) {
+       std::cout << c << std::flush;
+       std::this_thread::sleep_for(std::chono::miliseconds(delay_ms));
+     
     }
-
-  //publish.io
-  void main{
-
+    std::cout << std::endl;
 
 }
-__glibcxx_requires_partitioned_lower (P_OVERLAY)
-int main(int argc, char const *argv[])
-{
-    int64_t
-    return 0;
-}
-()
