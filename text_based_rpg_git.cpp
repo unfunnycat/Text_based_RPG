@@ -58,9 +58,12 @@ public:
       inventory.end(), "Health positon");
       
       if (it != inventory.erase(it);
+         inventory.erase(it);
+         int healAmount = 10;
+         hp = std::min(maxHp, hp + healAmount);
+         typeText("you used a Health Potion and restored " + std::to_string(healAmount) + " HP.");
 
-
-
+                         showStats
 
    }
 
