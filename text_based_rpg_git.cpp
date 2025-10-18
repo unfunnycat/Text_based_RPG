@@ -64,6 +64,7 @@ public:
          typeText("you used a Health Potion and restored " + std::to_string(healAmount) + " HP.");
 
                          showStats
+                         __has_extension
 
    }
 
