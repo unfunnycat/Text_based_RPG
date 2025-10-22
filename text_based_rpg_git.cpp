@@ -51,7 +51,7 @@ public:
           return hp > 0;
                  hp = 0;
 
-   }
+   {
    void usePotion() {
              auto it =
       std::find(inventory.begin(),
@@ -62,9 +62,38 @@ public:
          int healAmount = 10;
          hp = std::min(maxHp, hp + healAmount);
          typeText("you used a Health Potion and restored " + std::to_string(healAmount) + " HP.");
+         showStats();
+       } else {
+          typeText("You don't have any Health Potions!");
+       }
+      }
+      
+      void attack(Monster& monster)  {
+         int damage = getRandom(attackPower - 2, attackPower + 2);
+         typeText("You attack the " + monster.name + " for " + std::to_string(damage) + "damage!")
+         monster.takeDamage(int damage) {
+            
+           
+      void takedamage(int damage) {  
+            hp -= damage;
+            if (hp < 0) hp =0;
+            typeText(name + " takes " + std::to_string(damage))
+          }
+      void showStats() const {
+           typeText("---" + name + "'s Stats ---");
+           typeText("HP: " + std::to_string(hp) + "/" + std::to_string(maxHp));
+           typeText("Attack: " + std::to_string(attackPower));
 
-                         showStats
-                         __has_extension
+           typeText("Inventory:");
+           if (inventory.empty()) {
+                    typeText(" (Empty)");
+            
+
+           }
+
+
+
+
 
    }
 
@@ -74,7 +103,6 @@ public:
 
 
 
-   }
 
 
 
@@ -95,13 +123,3 @@ public:
 
 
 
-
-
-
-
-
-
-
-
-
-}
