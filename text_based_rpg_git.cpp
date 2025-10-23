@@ -87,7 +87,7 @@ public:
            typeText("Inventory:");
            if (inventory.empty()) {
                     typeText(" (Empty)");
-            
+                     typeText( 'Breakgon')
 
            }
 
